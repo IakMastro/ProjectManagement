@@ -265,3 +265,5 @@ TSWLatexianTemp*
 *.sta
 
 .vscode
+
+docs/Figures
