@@ -1,17 +1,43 @@
-\documentclass{fphw}
+\documentclass[
+    11pt,
+    singlespacing,
+    liststotoc,
+    toctotoc,
+    headspline
+]{fphw}
 
-\usepackage{ucs}
-
-\usepackage[utf8x]{inputenc}
-\usepackage[greek, english]{babel}
 \usepackage{alphabeta}
 \usepackage{lmodern}
 
-\usepackage[T1]{fontenc} 
-\usepackage{graphicx} 
+\usepackage{fontenc}
+\usepackage{xgreek}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+
+\usepackage[Greek,Latin]{ucharclasses}
+\setTransitionsForGreek{\setlanguage{greek}}{\setlanguage{american}}
+
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+
+\setmainfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\newfontfamily{\greekfont}{CMU Serif}
+\newfontfamily{\greekfontsf}{CMU Sans Serif}
+
+\setmainfont{GFS Didot}
+
+\usepackage[]{unicode-math}
+\setmathfont{Latin Modern Math}
+
+\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex}
+
+\usepackage{graphicx}
 \usepackage{booktabs}
-\usepackage{listings} 
+\usepackage{listings}
 \usepackage{enumerate}
+\usepackage{float}
+
+\usepackage[hidelinks]{hyperref}
 
 \title{Τελική Εργασία: Διαχείριση Αποθηκών}
 \author{Ιάκωβος Μαστρογιαννόπουλος - Νικόλαος Σέργης - Κωνσταντίνος Καμαρόπουλος}
@@ -37,6 +63,8 @@
 
 \newpage
 \tableofcontents
+\listoffigures
+\listoftables
 
 \newpage
 \include{Chapters/Chapter1}
